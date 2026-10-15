@@ -12,6 +12,7 @@ import { execFileSync } from "node:child_process";
 import { resolve } from "node:path";
 import { THEMES } from "./themes.mjs";
 import { motif } from "./motifs.mjs";
+import { applyTemplate } from "../shared/scripts/template.mjs";
 
 const kit = resolve(import.meta.dirname, "..");
 const owner = process.env.OWNER || "ank-man";
@@ -67,14 +68,31 @@ function buildCard(t) {
     card.badgeLabel = "GSA Member";
   }
   Object.assign(card, persona);
+  card.wallet = { ...card.wallet, ...walletFor(t) };
+  card.template = t.id;
+  return card;
+}
+
+function walletFor(t) {
   const p = t.palette;
-  card.wallet = {
-    ...card.wallet,
+  return {
     ...(p && { backgroundColor: (p.card?.[1]) || p.accent, foregroundColor: "#FFFFFF", labelColor: p.soft || "#EDEDED" }),
     ...(t.wallet || {})
   };
-  return card;
 }
+
+const themeColorFor = (t) => t.palette ? (t.layout === "classic" ? t.palette.accent : t.palette.bg) : null;
+
+// The catalog every repo ships, so a card can switch to any template later.
+const CATALOG = {
+  previewBase: `https://${owner}.github.io/gsa-connect-kit/docs/screenshots/`,
+  themes: THEMES.map((t) => ({
+    id: t.id, name: t.name, group: t.group, layout: t.layout, tagline: t.tagline, bestFor: t.bestFor,
+    accent: t.palette?.accent || "#BA0C2F", bg: t.palette?.bg || null, themeColor: themeColorFor(t),
+    fontsHref: t.fonts ? fontsHref(t.fonts) : null, css: themeCss(t), wallet: walletFor(t),
+    favicon: t.palette ? iconSvgs(t.palette.accent).favicon : null
+  }))
+};
 
 function iconSvgs(accent, bg = "#ffffff") {
   const glyph = (s) => `<g fill="none" stroke-linecap="round" stroke-width="5"><circle cx="22" cy="32" r="4" fill="${s}" stroke="none"/><path d="M30 22a14 14 0 0 1 0 20M37 15a24 24 0 0 1 0 34M44 8a34 34 0 0 1 0 48" stroke="${s}"/></g>`;
@@ -106,26 +124,20 @@ for (const t of themes) {
   for (const f of await readdir(out)) if (f !== ".git") await rm(resolve(out, f), { recursive: true, force: true });
 
   await cp(resolve(kit, "shared"), out, { recursive: true });
-  await cp(resolve(kit, "layouts", t.layout), out, { recursive: true });
 
-  // theme.css + fonts + theme colour in index.html
-  await writeFile(resolve(out, "css/theme.css"), themeCss(t));
-  let html = await readFile(resolve(out, "index.html"), "utf8");
-  html = html.replace('<link rel="stylesheet" href="css/style.css">', '<link rel="stylesheet" href="css/style.css">\n  <link rel="stylesheet" href="css/theme.css">');
-  if (t.fonts) html = html.replace(/<link href="https:\/\/fonts\.googleapis\.com\/css2\?[^"]+" rel="stylesheet">/, `<link href="${fontsHref(t.fonts)}" rel="stylesheet">`);
-  const themeColor = t.palette ? (t.layout === "midnight" || t.layout === "terminal" ? t.palette.bg : t.layout === "classic" ? t.palette.accent : t.palette.bg) : null;
-  if (themeColor) html = html.replace(/<meta name="theme-color" content="[^"]*">/, `<meta name="theme-color" content="${themeColor}">`);
-  html = html.replace(/<!-- (TEMPLATE|LAYOUT): ([^—]+)—/, `<!-- ${t.name} theme · $2layout —`);
-  await writeFile(resolve(out, "index.html"), html);
+  // every layout + the catalog, then apply this repo's own template
+  await mkdir(resolve(out, "templates/layouts"), { recursive: true });
+  for (const l of (await readdir(resolve(kit, "layouts"))).filter((d) => !d.startsWith("."))) {
+    await mkdir(resolve(out, "templates/layouts", l), { recursive: true });
+    await cp(resolve(kit, "layouts", l, "index.html"), resolve(out, "templates/layouts", l, "index.html"));
+    await cp(resolve(kit, "layouts", l, "css/style.css"), resolve(out, "templates/layouts", l, "style.css"));
+  }
+  await writeFile(resolve(out, "templates/catalog.json"), JSON.stringify(CATALOG));
+  await applyTemplate({ root: out, id: t.id });
 
   const card = buildCard(t);
   await writeFile(resolve(out, "card.json"), JSON.stringify(card, null, 2) + "\n");
   if (t.palette) await writeIcons(out, t.palette.accent);
-
-  const manifest = JSON.parse(await readFile(resolve(out, "manifest.webmanifest"), "utf8"));
-  manifest.name = `${t.name} · GSA Connect`;
-  if (t.palette) { manifest.theme_color = themeColor; manifest.background_color = t.palette.bg; }
-  await writeFile(resolve(out, "manifest.webmanifest"), JSON.stringify(manifest, null, 2) + "\n");
 
   const pkg = JSON.parse(await readFile(resolve(out, "package.json"), "utf8"));
   pkg.name = t.repo;

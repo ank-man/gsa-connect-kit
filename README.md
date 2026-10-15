@@ -20,7 +20,9 @@ cd my-card && npm run setup        # form opens → upload photo & CV → Publis
 | 📄 **CV & research** | CV PDF, research interests, publications, projects, education, awards |
 | 🔳 **QR + NFC** | On-page QR, print-ready `qr.svg`/`qr.png`, and NFC tag instructions |
 | 👛 **Wallets** | Apple Wallet `.pkpass`, Google Wallet and Samsung Wallet passes, built in CI from secrets |
-| 🧩 **Setup form** | `npm run setup`: form, photo crop/upload, CV upload, live phone preview, one-click publish |
+| 🧩 **Setup form** | `npm run setup`: template picker, photo crop/upload, CV upload, live phone preview, one-click publish |
+| 🎨 **Switch anytime** | Every repo ships all 51 templates; change `"template"` in `card.json` or click one in the form |
+| 📶 **NFC writer** | `/nfc.html` writes your card link to an NFC tag from Chrome on Android (verify, batch, lock) |
 | 📱 **PWA** | Add to Home Screen, native share sheet, light/dark aware |
 
 ## Templates (51)
