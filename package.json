@@ -1,0 +1,16 @@
+{
+  "name": "gsa-connect-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generator for UGA GSA Connect digital business card templates. Powered by ScholarTap.",
+  "type": "module",
+  "scripts": {
+    "assemble": "node tools/assemble.mjs",
+    "screenshots": "node tools/screenshots.mjs",
+    "gallery": "node tools/gallery.mjs",
+    "all": "node tools/assemble.mjs && node tools/screenshots.mjs && node tools/assemble.mjs && node tools/gallery.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.50.0"
+  }
+}

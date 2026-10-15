@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GSA Connect Templates</title>
+<meta name="description" content="51 free digital business card templates for UGA graduate and professional students: CV, research, QR, NFC and Apple, Google and Samsung Wallet. Powered by ScholarTap.">
+<link rel="icon" href="shared/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --accent:#BA0C2F; --bg:#f6f3ef; --surface:#fff; --ink:#18130f; --muted:#6c645d; --line:#e4ddd6; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121012; --surface:#1c191b; --ink:#f2eeea; --muted:#a59d97; --line:#322d30; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg:#121012; --surface:#1c191b; --ink:#f2eeea; --muted:#a59d97; --line:#322d30; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:400 16px/1.55 Inter, system-ui, sans-serif; }
+a { color: inherit; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+header.hero { padding: 56px 0 28px; }
+.eyebrow { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 12px; }
+h1 { font: 800 clamp(36px, 7vw, 68px)/1 Fraunces, Georgia, serif; letter-spacing: -.02em; margin: 0; max-width: 16ch; }
+.lede { max-width: 62ch; color: var(--muted); font-size: 18px; margin: 18px 0 0; }
+.feats { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+.feats li { padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; background: var(--surface); }
+.quick { margin-top: 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; max-width: 760px; }
+.quick h2 { font-size: 14px; margin: 0 0 8px; letter-spacing: .06em; text-transform: uppercase; }
+.quick pre { margin: 0; overflow-x: auto; font: 13.5px/1.6 ui-monospace, Menlo, monospace; }
+.bar { position: sticky; top: 0; z-index: 3; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 12px 0; }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 7px 13px; font: 500 14px Inter, sans-serif; cursor: pointer; min-height: 36px; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+input[type=search] { margin-left: auto; min-width: 220px; flex: 1 1 220px; max-width: 320px; padding: 9px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; }
+.count { color: var(--muted); font-size: 14px; margin: 18px 0 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; padding: 16px 0 48px; }
+.tpl { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.shot { display: block; aspect-ratio: 390 / 560; overflow: hidden; background: var(--line); border-bottom: 4px solid var(--a); }
+.shot img { width: 100%; height: auto; display: block; transition: transform .5s ease; }
+.tpl:hover .shot img { transform: translateY(-6%); }
+.body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.kicker { margin: 0; font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; text-transform: capitalize; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--a); }
+h3 { margin: 0; font: 600 20px/1.2 Fraunces, Georgia, serif; }
+.tag { margin: 0; font-size: 14px; }
+.best { margin: 0; font-size: 13px; color: var(--muted); }
+.best b { color: var(--ink); font-weight: 600; }
+.btns { display: flex; gap: 8px; margin-top: auto; padding-top: 8px; }
+.btn { flex: 1; text-align: center; text-decoration: none; padding: 9px 10px; border-radius: 10px; border: 1px solid var(--line); font-weight: 600; font-size: 14px; }
+.btn.primary { background: var(--a); border-color: var(--a); color: #fff; }
+footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+footer strong { color: var(--accent); }
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <p class="eyebrow">UGA Graduate Student Association · GSA Connect</p>
+  <h1>A digital business card for every major.</h1>
+  <p class="lede">51 free, open-source card templates for graduate and professional students. Host your CV, research and links on GitHub Pages, share by QR or NFC tap, and add your card to Apple, Google or Samsung Wallet.</p>
+  <ul class="feats"><li>📇 Save-contact vCard</li><li>📄 CV &amp; publications</li><li>🔳 QR + NFC</li><li>👛 Apple · Google · Samsung Wallet</li><li>🧩 Setup form + live preview</li><li>🆓 Free hosting</li></ul>
+  <div class="quick"><h2>Three-minute start</h2><pre>gh repo create my-card --template ank-man/gsa-connect-entomology --public --clone
+cd my-card && npm run setup     # form opens → upload photo &amp; CV → Publish</pre></div>
+</header>
+<nav class="bar" aria-label="Filter templates"><div class="wrap">
+  <button class="chip" aria-pressed="true" data-g="">All</button>
+  <button class="chip" aria-pressed="false" data-g="General">General</button>
+  <button class="chip" aria-pressed="false" data-g="Computing &amp; Data">Computing &amp; Data</button>
+  <button class="chip" aria-pressed="false" data-g="Engineering">Engineering</button>
+  <button class="chip" aria-pressed="false" data-g="Physical Sciences">Physical Sciences</button>
+  <button class="chip" aria-pressed="false" data-g="Life Sciences">Life Sciences</button>
+  <button class="chip" aria-pressed="false" data-g="Plant &amp; Agricultural Sciences">Plant &amp; Agricultural Sciences</button>
+  <button class="chip" aria-pressed="false" data-g="Health Professions">Health Professions</button>
+  <button class="chip" aria-pressed="false" data-g="Law, Business &amp; Policy">Law, Business &amp; Policy</button>
+  <button class="chip" aria-pressed="false" data-g="Social Sciences &amp; Education">Social Sciences &amp; Education</button>
+  <button class="chip" aria-pressed="false" data-g="Humanities">Humanities</button>
+  <button class="chip" aria-pressed="false" data-g="Arts &amp; Media">Arts &amp; Media</button>
+  <input type="search" placeholder="Search: chemistry, law, insects…" aria-label="Search templates">
+</div></nav>
+<main class="wrap">
+  <p class="count" id="count"></p>
+  <div class="grid" id="grid">
+<article class="tpl" data-group="General" data-q="classic bulldog red and arch black. a bold, all-purpose card. any graduate or professional student classic" style="--a:#BA0C2F">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-classic/" target="_blank" rel="noopener"><img src="docs/screenshots/classic.jpg" alt="Classic template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>General · classic</p>
+    <h3>Classic</h3>
+    <p class="tag">Bulldog red and arch black. A bold, all-purpose card.</p>
+    <p class="best"><b>Best for</b> Any graduate or professional student</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-classic/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-classic/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="General" data-q="scholar cream paper and serif type. reads like an academic homepage. phd candidates and postdocs going on the job market scholar" style="--a:#BA0C2F">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-scholar/" target="_blank" rel="noopener"><img src="docs/screenshots/scholar.jpg" alt="Scholar template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>General · scholar</p>
+    <h3>Scholar</h3>
+    <p class="tag">Cream paper and serif type. Reads like an academic homepage.</p>
+    <p class="best"><b>Best for</b> PhD candidates and postdocs going on the job market</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-scholar/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-scholar/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="General" data-q="minimal link-in-bio: big tappable buttons and a pop-up qr. conferences and fast networking minimal" style="--a:#BA0C2F">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-minimal/" target="_blank" rel="noopener"><img src="docs/screenshots/minimal.jpg" alt="Minimal template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>General · minimal</p>
+    <h3>Minimal</h3>
+    <p class="tag">Link-in-bio: big tappable buttons and a pop-up QR.</p>
+    <p class="best"><b>Best for</b> Conferences and fast networking</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-minimal/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-minimal/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="General" data-q="midnight dark glass ui with a 3d card that flips to reveal the qr. anyone who wants a card that stands out midnight" style="--a:#BA0C2F">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-midnight/" target="_blank" rel="noopener"><img src="docs/screenshots/midnight.jpg" alt="Midnight template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>General · midnight</p>
+    <h3>Midnight</h3>
+    <p class="tag">Dark glass UI with a 3D card that flips to reveal the QR.</p>
+    <p class="best"><b>Best for</b> Anyone who wants a card that stands out</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-midnight/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-midnight/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="General" data-q="officer id badge with office hours, events and a book-a-meeting button. gsa executives, senators, committee chairs officer" style="--a:#BA0C2F">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-officer/" target="_blank" rel="noopener"><img src="docs/screenshots/officer.jpg" alt="Officer template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>General · officer</p>
+    <h3>Officer</h3>
+    <p class="tag">ID badge with office hours, events and a book-a-meeting button.</p>
+    <p class="best"><b>Best for</b> GSA executives, senators, committee chairs</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-officer/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-officer/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Computing &amp; Data" data-q="computer science a shell session: `whoami`, `ls ./research`, `git log papers/`. cs, software engineering, cybersecurity terminal" style="--a:#3fb950">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-computer-science/" target="_blank" rel="noopener"><img src="docs/screenshots/computer-science.jpg" alt="Computer Science template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Computing &amp; Data · terminal</p>
+    <h3>Computer Science</h3>
+    <p class="tag">A shell session: `whoami`, `ls ./research`, `git log papers/`.</p>
+    <p class="best"><b>Best for</b> CS, software engineering, cybersecurity</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-computer-science/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-computer-science/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Computing &amp; Data" data-q="data science graph-paper grid, teal signal and clean sans type. data science, analytics, business intelligence minimal" style="--a:#0f9d8a">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-data-science/" target="_blank" rel="noopener"><img src="docs/screenshots/data-science.jpg" alt="Data Science template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Computing &amp; Data · minimal</p>
+    <h3>Data Science</h3>
+    <p class="tag">Graph-paper grid, teal signal and clean sans type.</p>
+    <p class="best"><b>Best for</b> Data science, analytics, business intelligence</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-data-science/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-data-science/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Computing &amp; Data" data-q="artificial intelligence neural-network lattice on a violet holo card. ai, machine learning, robotics midnight" style="--a:#a78bfa">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-artificial-intelligence/" target="_blank" rel="noopener"><img src="docs/screenshots/artificial-intelligence.jpg" alt="Artificial Intelligence template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Computing &amp; Data · midnight</p>
+    <h3>Artificial Intelligence</h3>
+    <p class="tag">Neural-network lattice on a violet holo card.</p>
+    <p class="best"><b>Best for</b> AI, machine learning, robotics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-artificial-intelligence/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-artificial-intelligence/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Engineering" data-q="electrical &amp; computer eng. copper circuit traces on a pcb-green card. electrical, computer and embedded engineering midnight" style="--a:#f5a524">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-electrical-engineering/" target="_blank" rel="noopener"><img src="docs/screenshots/electrical-engineering.jpg" alt="Electrical &amp; Computer Eng. template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Engineering · midnight</p>
+    <h3>Electrical &amp; Computer Eng.</h3>
+    <p class="tag">Copper circuit traces on a PCB-green card.</p>
+    <p class="best"><b>Best for</b> Electrical, computer and embedded engineering</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-electrical-engineering/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-electrical-engineering/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Engineering" data-q="mechanical engineering blueprint grid header, steel blue and condensed type. mechanical, biological and agricultural engineering classic" style="--a:#1e5aa8">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-mechanical-engineering/" target="_blank" rel="noopener"><img src="docs/screenshots/mechanical-engineering.jpg" alt="Mechanical Engineering template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Engineering · classic</p>
+    <h3>Mechanical Engineering</h3>
+    <p class="tag">Blueprint grid header, steel blue and condensed type.</p>
+    <p class="best"><b>Best for</b> Mechanical, biological and agricultural engineering</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-mechanical-engineering/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-mechanical-engineering/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Engineering" data-q="civil &amp; environmental eng. hard-hat orange id badge with a blueprint header. civil, environmental and construction engineering officer" style="--a:#e8590c">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-civil-engineering/" target="_blank" rel="noopener"><img src="docs/screenshots/civil-engineering.jpg" alt="Civil &amp; Environmental Eng. template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Engineering · officer</p>
+    <h3>Civil &amp; Environmental Eng.</h3>
+    <p class="tag">Hard-hat orange ID badge with a blueprint header.</p>
+    <p class="best"><b>Best for</b> Civil, environmental and construction engineering</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-civil-engineering/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-civil-engineering/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Physical Sciences" data-q="chemistry benzene-ring lattice on a lab-notebook page. chemistry and biochemistry scholar" style="--a:#0e7c86">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-chemistry/" target="_blank" rel="noopener"><img src="docs/screenshots/chemistry.jpg" alt="Chemistry template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Physical Sciences · scholar</p>
+    <h3>Chemistry</h3>
+    <p class="tag">Benzene-ring lattice on a lab-notebook page.</p>
+    <p class="best"><b>Best for</b> Chemistry and biochemistry</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-chemistry/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-chemistry/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Physical Sciences" data-q="physics &amp; astronomy star field and an indigo deep-space card. physics, astronomy and astrophysics midnight" style="--a:#8ab4ff">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-physics-astronomy/" target="_blank" rel="noopener"><img src="docs/screenshots/physics-astronomy.jpg" alt="Physics &amp; Astronomy template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Physical Sciences · midnight</p>
+    <h3>Physics &amp; Astronomy</h3>
+    <p class="tag">Star field and an indigo deep-space card.</p>
+    <p class="best"><b>Best for</b> Physics, astronomy and astrophysics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-physics-astronomy/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-physics-astronomy/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Physical Sciences" data-q="mathematics chalkboard symbols and a serif, quiet layout. pure and applied mathematics minimal" style="--a:#2f4fa2">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-mathematics/" target="_blank" rel="noopener"><img src="docs/screenshots/mathematics.jpg" alt="Mathematics template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Physical Sciences · minimal</p>
+    <h3>Mathematics</h3>
+    <p class="tag">Chalkboard symbols and a serif, quiet layout.</p>
+    <p class="best"><b>Best for</b> Pure and applied mathematics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-mathematics/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-mathematics/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Physical Sciences" data-q="statistics bar-chart motif and an analytic, editorial page. statistics and biostatistics scholar" style="--a:#5b3cc4">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-statistics/" target="_blank" rel="noopener"><img src="docs/screenshots/statistics.jpg" alt="Statistics template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Physical Sciences · scholar</p>
+    <h3>Statistics</h3>
+    <p class="tag">Bar-chart motif and an analytic, editorial page.</p>
+    <p class="best"><b>Best for</b> Statistics and biostatistics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-statistics/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-statistics/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Physical Sciences" data-q="geology sediment strata and warm sandstone tones. geology, geography and earth sciences classic" style="--a:#9a4f1f">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-geology/" target="_blank" rel="noopener"><img src="docs/screenshots/geology.jpg" alt="Geology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Physical Sciences · classic</p>
+    <h3>Geology</h3>
+    <p class="tag">Sediment strata and warm sandstone tones.</p>
+    <p class="best"><b>Best for</b> Geology, geography and earth sciences</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-geology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-geology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Life Sciences" data-q="genetics double-helix header in deep magenta. genetics, genomics and bioinformatics classic" style="--a:#b0126a">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-genetics/" target="_blank" rel="noopener"><img src="docs/screenshots/genetics.jpg" alt="Genetics template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Life Sciences · classic</p>
+    <h3>Genetics</h3>
+    <p class="tag">Double-helix header in deep magenta.</p>
+    <p class="best"><b>Best for</b> Genetics, genomics and bioinformatics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-genetics/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-genetics/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Life Sciences" data-q="biochemistry &amp; molecular bio cell-and-nucleus pattern with a crimson signal. biochemistry, molecular and cellular biology minimal" style="--a:#d1263b">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-biochemistry/" target="_blank" rel="noopener"><img src="docs/screenshots/biochemistry.jpg" alt="Biochemistry &amp; Molecular Bio template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Life Sciences · minimal</p>
+    <h3>Biochemistry &amp; Molecular Bio</h3>
+    <p class="tag">Cell-and-nucleus pattern with a crimson signal.</p>
+    <p class="best"><b>Best for</b> Biochemistry, molecular and cellular biology</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-biochemistry/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-biochemistry/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Life Sciences" data-q="neuroscience synapse network glowing on a magenta card. neuroscience and cognitive science midnight" style="--a:#ff5fa2">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-neuroscience/" target="_blank" rel="noopener"><img src="docs/screenshots/neuroscience.jpg" alt="Neuroscience template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Life Sciences · midnight</p>
+    <h3>Neuroscience</h3>
+    <p class="tag">Synapse network glowing on a magenta card.</p>
+    <p class="best"><b>Best for</b> Neuroscience and cognitive science</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-neuroscience/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-neuroscience/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Plant &amp; Agricultural Sciences" data-q="plant biology leaf motif and a herbarium-paper palette. plant biology and botany scholar" style="--a:#2f7d32">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-plant-biology/" target="_blank" rel="noopener"><img src="docs/screenshots/plant-biology.jpg" alt="Plant Biology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Plant &amp; Agricultural Sciences · scholar</p>
+    <h3>Plant Biology</h3>
+    <p class="tag">Leaf motif and a herbarium-paper palette.</p>
+    <p class="best"><b>Best for</b> Plant biology and botany</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-plant-biology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-plant-biology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Plant &amp; Agricultural Sciences" data-q="plant pathology rust-orange and olive with a cell-culture header. plant pathology and mycology classic" style="--a:#b5541c">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-plant-pathology/" target="_blank" rel="noopener"><img src="docs/screenshots/plant-pathology.jpg" alt="Plant Pathology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Plant &amp; Agricultural Sciences · classic</p>
+    <h3>Plant Pathology</h3>
+    <p class="tag">Rust-orange and olive with a cell-culture header.</p>
+    <p class="best"><b>Best for</b> Plant pathology and mycology</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-plant-pathology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-plant-pathology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Plant &amp; Agricultural Sciences" data-q="horticulture botanical editorial: blush pink, leaf green, big serif type. horticulture, turfgrass, landscape plants portfolio" style="--a:#d9487d">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-horticulture/" target="_blank" rel="noopener"><img src="docs/screenshots/horticulture.jpg" alt="Horticulture template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Plant &amp; Agricultural Sciences · portfolio</p>
+    <h3>Horticulture</h3>
+    <p class="tag">Botanical editorial: blush pink, leaf green, big serif type.</p>
+    <p class="best"><b>Best for</b> Horticulture, turfgrass, landscape plants</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-horticulture/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-horticulture/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Plant &amp; Agricultural Sciences" data-q="crop &amp; soil sciences wheat-gold badge with a seed-head pattern. agronomy, crop and soil sciences, agribusiness officer" style="--a:#b8860b">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-crop-soil-sciences/" target="_blank" rel="noopener"><img src="docs/screenshots/crop-soil-sciences.jpg" alt="Crop &amp; Soil Sciences template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Plant &amp; Agricultural Sciences · officer</p>
+    <h3>Crop &amp; Soil Sciences</h3>
+    <p class="tag">Wheat-gold badge with a seed-head pattern.</p>
+    <p class="best"><b>Best for</b> Agronomy, crop and soil sciences, agribusiness</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-crop-soil-sciences/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-crop-soil-sciences/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Plant &amp; Agricultural Sciences" data-q="entomology beetles and wings on an amber-and-black header. entomology, apiculture and pollinator science classic" style="--a:#d98e04">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-entomology/" target="_blank" rel="noopener"><img src="docs/screenshots/entomology.jpg" alt="Entomology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Plant &amp; Agricultural Sciences · classic</p>
+    <h3>Entomology</h3>
+    <p class="tag">Beetles and wings on an amber-and-black header.</p>
+    <p class="best"><b>Best for</b> Entomology, apiculture and pollinator science</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-entomology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-entomology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Life Sciences" data-q="ecology topographic contour lines in moss and clay. ecology, evolutionary biology, conservation scholar" style="--a:#4d7c0f">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-ecology/" target="_blank" rel="noopener"><img src="docs/screenshots/ecology.jpg" alt="Ecology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Life Sciences · scholar</p>
+    <h3>Ecology</h3>
+    <p class="tag">Topographic contour lines in moss and clay.</p>
+    <p class="best"><b>Best for</b> Ecology, evolutionary biology, conservation</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-ecology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-ecology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Life Sciences" data-q="marine sciences ocean swell lines on a deep-sea gradient. marine science, oceanography, fisheries midnight" style="--a:#38bdf8">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-marine-sciences/" target="_blank" rel="noopener"><img src="docs/screenshots/marine-sciences.jpg" alt="Marine Sciences template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Life Sciences · midnight</p>
+    <h3>Marine Sciences</h3>
+    <p class="tag">Ocean swell lines on a deep-sea gradient.</p>
+    <p class="best"><b>Best for</b> Marine science, oceanography, fisheries</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-marine-sciences/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-marine-sciences/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Life Sciences" data-q="forestry &amp; natural resources forest green with a contour-map header. forestry, wildlife, fisheries and natural resources classic" style="--a:#245c3a">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-forestry/" target="_blank" rel="noopener"><img src="docs/screenshots/forestry.jpg" alt="Forestry &amp; Natural Resources template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Life Sciences · classic</p>
+    <h3>Forestry &amp; Natural Resources</h3>
+    <p class="tag">Forest green with a contour-map header.</p>
+    <p class="best"><b>Best for</b> Forestry, wildlife, fisheries and natural resources</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-forestry/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-forestry/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Plant &amp; Agricultural Sciences" data-q="food science tomato red, halftone dots, friendly rounded type. food science, nutrition and dietetics minimal" style="--a:#e2412a">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-food-science/" target="_blank" rel="noopener"><img src="docs/screenshots/food-science.jpg" alt="Food Science template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Plant &amp; Agricultural Sciences · minimal</p>
+    <h3>Food Science</h3>
+    <p class="tag">Tomato red, halftone dots, friendly rounded type.</p>
+    <p class="best"><b>Best for</b> Food science, nutrition and dietetics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-food-science/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-food-science/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Health Professions" data-q="veterinary medicine clinical teal badge with paw-print pattern. dvm students, vet residents and biomedical sciences officer" style="--a:#0f8b8d">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-veterinary-medicine/" target="_blank" rel="noopener"><img src="docs/screenshots/veterinary-medicine.jpg" alt="Veterinary Medicine template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Health Professions · officer</p>
+    <h3>Veterinary Medicine</h3>
+    <p class="tag">Clinical teal badge with paw-print pattern.</p>
+    <p class="best"><b>Best for</b> DVM students, vet residents and biomedical sciences</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-veterinary-medicine/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-veterinary-medicine/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Health Professions" data-q="pharmacy rx-blue badge with a capsule pattern. pharmd and pharmaceutical sciences officer" style="--a:#1d6fd6">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-pharmacy/" target="_blank" rel="noopener"><img src="docs/screenshots/pharmacy.jpg" alt="Pharmacy template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Health Professions · officer</p>
+    <h3>Pharmacy</h3>
+    <p class="tag">Rx-blue badge with a capsule pattern.</p>
+    <p class="best"><b>Best for</b> PharmD and pharmaceutical sciences</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-pharmacy/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-pharmacy/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Health Professions" data-q="medicine (md) navy clinical badge with a medical-cross pattern. medical students and biomedical researchers officer" style="--a:#1c3d7a">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-medicine/" target="_blank" rel="noopener"><img src="docs/screenshots/medicine.jpg" alt="Medicine (MD) template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Health Professions · officer</p>
+    <h3>Medicine (MD)</h3>
+    <p class="tag">Navy clinical badge with a medical-cross pattern.</p>
+    <p class="best"><b>Best for</b> Medical students and biomedical researchers</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-medicine/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-medicine/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Health Professions" data-q="public health community orange with a cross-hatch header. mph, epidemiology, health policy classic" style="--a:#e0660f">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-public-health/" target="_blank" rel="noopener"><img src="docs/screenshots/public-health.jpg" alt="Public Health template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Health Professions · classic</p>
+    <h3>Public Health</h3>
+    <p class="tag">Community orange with a cross-hatch header.</p>
+    <p class="best"><b>Best for</b> MPH, epidemiology, health policy</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-public-health/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-public-health/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Health Professions" data-q="kinesiology energetic lime, speed stripes, sporty type. kinesiology, exercise science, sport management minimal" style="--a:#65a30d">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-kinesiology/" target="_blank" rel="noopener"><img src="docs/screenshots/kinesiology.jpg" alt="Kinesiology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Health Professions · minimal</p>
+    <h3>Kinesiology</h3>
+    <p class="tag">Energetic lime, speed stripes, sporty type.</p>
+    <p class="best"><b>Best for</b> Kinesiology, exercise science, sport management</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-kinesiology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-kinesiology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Law, Business &amp; Policy" data-q="law (jd) navy and gold, classical columns, garamond. jd, llm and legal scholars scholar" style="--a:#9c7a2b">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-law/" target="_blank" rel="noopener"><img src="docs/screenshots/law.jpg" alt="Law (JD) template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Law, Business &amp; Policy · scholar</p>
+    <h3>Law (JD)</h3>
+    <p class="tag">Navy and gold, classical columns, Garamond.</p>
+    <p class="best"><b>Best for</b> JD, LLM and legal scholars</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-law/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-law/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Law, Business &amp; Policy" data-q="business (mba) black and gold, sharp and executive. mba, ms business, entrepreneurship minimal" style="--a:#b8860b">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-business-mba/" target="_blank" rel="noopener"><img src="docs/screenshots/business-mba.jpg" alt="Business (MBA) template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Law, Business &amp; Policy · minimal</p>
+    <h3>Business (MBA)</h3>
+    <p class="tag">Black and gold, sharp and executive.</p>
+    <p class="best"><b>Best for</b> MBA, MS business, entrepreneurship</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-business-mba/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-business-mba/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Law, Business &amp; Policy" data-q="finance &amp; accounting ledger lines and banker green. finance, accounting, macc and risk management classic" style="--a:#14633d">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-finance-accounting/" target="_blank" rel="noopener"><img src="docs/screenshots/finance-accounting.jpg" alt="Finance &amp; Accounting template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Law, Business &amp; Policy · classic</p>
+    <h3>Finance &amp; Accounting</h3>
+    <p class="tag">Ledger lines and banker green.</p>
+    <p class="best"><b>Best for</b> Finance, accounting, MAcc and risk management</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-finance-accounting/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-finance-accounting/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Law, Business &amp; Policy" data-q="economics slate-blue charts on a policy-paper page. economics and agricultural &amp; applied economics scholar" style="--a:#36557a">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-economics/" target="_blank" rel="noopener"><img src="docs/screenshots/economics.jpg" alt="Economics template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Law, Business &amp; Policy · scholar</p>
+    <h3>Economics</h3>
+    <p class="tag">Slate-blue charts on a policy-paper page.</p>
+    <p class="best"><b>Best for</b> Economics and agricultural &amp; applied economics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-economics/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-economics/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Law, Business &amp; Policy" data-q="public policy &amp; int'l affairs diplomatic navy with a globe-meridian header. mpa, international affairs, political science classic" style="--a:#1f3b73">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-public-policy/" target="_blank" rel="noopener"><img src="docs/screenshots/public-policy.jpg" alt="Public Policy &amp; Int'l Affairs template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Law, Business &amp; Policy · classic</p>
+    <h3>Public Policy &amp; Int'l Affairs</h3>
+    <p class="tag">Diplomatic navy with a globe-meridian header.</p>
+    <p class="best"><b>Best for</b> MPA, international affairs, political science</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-public-policy/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-public-policy/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Social Sciences &amp; Education" data-q="psychology calm lavender with a soft neural pattern. psychology, counseling and human development minimal" style="--a:#7c5cc4">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-psychology/" target="_blank" rel="noopener"><img src="docs/screenshots/psychology.jpg" alt="Psychology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Social Sciences &amp; Education · minimal</p>
+    <h3>Psychology</h3>
+    <p class="tag">Calm lavender with a soft neural pattern.</p>
+    <p class="best"><b>Best for</b> Psychology, counseling and human development</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-psychology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-psychology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Social Sciences &amp; Education" data-q="social work warm coral badge built for community work. msw, community organizing and nonprofit leaders officer" style="--a:#e2574c">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-social-work/" target="_blank" rel="noopener"><img src="docs/screenshots/social-work.jpg" alt="Social Work template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Social Sciences &amp; Education · officer</p>
+    <h3>Social Work</h3>
+    <p class="tag">Warm coral badge built for community work.</p>
+    <p class="best"><b>Best for</b> MSW, community organizing and nonprofit leaders</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-social-work/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-social-work/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Social Sciences &amp; Education" data-q="education sunflower and notebook-ruled lines. teacher education, higher ed, learning sciences classic" style="--a:#d97706">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-education/" target="_blank" rel="noopener"><img src="docs/screenshots/education.jpg" alt="Education template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Social Sciences &amp; Education · classic</p>
+    <h3>Education</h3>
+    <p class="tag">Sunflower and notebook-ruled lines.</p>
+    <p class="best"><b>Best for</b> Teacher education, higher ed, learning sciences</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-education/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-education/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Social Sciences &amp; Education" data-q="anthropology &amp; archaeology terracotta tones with sediment strata. anthropology, archaeology, sociology scholar" style="--a:#b4532a">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-anthropology/" target="_blank" rel="noopener"><img src="docs/screenshots/anthropology.jpg" alt="Anthropology &amp; Archaeology template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Social Sciences &amp; Education · scholar</p>
+    <h3>Anthropology &amp; Archaeology</h3>
+    <p class="tag">Terracotta tones with sediment strata.</p>
+    <p class="best"><b>Best for</b> Anthropology, archaeology, sociology</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-anthropology/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-anthropology/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Humanities" data-q="english &amp; literature oxblood ink, pilcrows and a bookish serif. english, comparative literature, rhetoric scholar" style="--a:#7a1f2b">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-english-literature/" target="_blank" rel="noopener"><img src="docs/screenshots/english-literature.jpg" alt="English &amp; Literature template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Humanities · scholar</p>
+    <h3>English &amp; Literature</h3>
+    <p class="tag">Oxblood ink, pilcrows and a bookish serif.</p>
+    <p class="best"><b>Best for</b> English, comparative literature, rhetoric</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-english-literature/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-english-literature/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Humanities" data-q="creative writing ink-on-paper editorial with ruled lines. mfa, creative writing, poetry and fiction portfolio" style="--a:#2d2a8c">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-creative-writing/" target="_blank" rel="noopener"><img src="docs/screenshots/creative-writing.jpg" alt="Creative Writing template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Humanities · portfolio</p>
+    <h3>Creative Writing</h3>
+    <p class="tag">Ink-on-paper editorial with ruled lines.</p>
+    <p class="best"><b>Best for</b> MFA, creative writing, poetry and fiction</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-creative-writing/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-creative-writing/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Humanities" data-q="history sepia parchment with classical columns. history, classics and religion scholar" style="--a:#8b5a2b">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-history/" target="_blank" rel="noopener"><img src="docs/screenshots/history.jpg" alt="History template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Humanities · scholar</p>
+    <h3>History</h3>
+    <p class="tag">Sepia parchment with classical columns.</p>
+    <p class="best"><b>Best for</b> History, classics and religion</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-history/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-history/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Humanities" data-q="philosophy &amp; religion stone grey, quiet serif, plenty of white space. philosophy, religion and ethics minimal" style="--a:#6b5e4f">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-philosophy/" target="_blank" rel="noopener"><img src="docs/screenshots/philosophy.jpg" alt="Philosophy &amp; Religion template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Humanities · minimal</p>
+    <h3>Philosophy &amp; Religion</h3>
+    <p class="tag">Stone grey, quiet serif, plenty of white space.</p>
+    <p class="best"><b>Best for</b> Philosophy, religion and ethics</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-philosophy/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-philosophy/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Humanities" data-q="linguistics &amp; languages phonetic sound-wave card in teal and plum. linguistics, world languages, translation midnight" style="--a:#2dd4bf">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-linguistics/" target="_blank" rel="noopener"><img src="docs/screenshots/linguistics.jpg" alt="Linguistics &amp; Languages template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Humanities · midnight</p>
+    <h3>Linguistics &amp; Languages</h3>
+    <p class="tag">Phonetic sound-wave card in teal and plum.</p>
+    <p class="best"><b>Best for</b> Linguistics, world languages, translation</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-linguistics/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-linguistics/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Arts &amp; Media" data-q="journalism &amp; mass comm newsprint halftone and a bold masthead. journalism, pr, advertising and film portfolio" style="--a:#d62828">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-journalism/" target="_blank" rel="noopener"><img src="docs/screenshots/journalism.jpg" alt="Journalism &amp; Mass Comm template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Arts &amp; Media · portfolio</p>
+    <h3>Journalism &amp; Mass Comm</h3>
+    <p class="tag">Newsprint halftone and a bold masthead.</p>
+    <p class="best"><b>Best for</b> Journalism, PR, advertising and film</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-journalism/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-journalism/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Arts &amp; Media" data-q="fine arts painterly brush marks and vivid colour blocks. studio art, art history, graphic design portfolio" style="--a:#ff3d7f">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-fine-arts/" target="_blank" rel="noopener"><img src="docs/screenshots/fine-arts.jpg" alt="Fine Arts template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Arts &amp; Media · portfolio</p>
+    <h3>Fine Arts</h3>
+    <p class="tag">Painterly brush marks and vivid colour blocks.</p>
+    <p class="best"><b>Best for</b> Studio art, art history, graphic design</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-fine-arts/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-fine-arts/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Arts &amp; Media" data-q="music gold staff lines on a concert-black card. performance, composition, musicology midnight" style="--a:#e0b23f">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-music/" target="_blank" rel="noopener"><img src="docs/screenshots/music.jpg" alt="Music template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Arts &amp; Media · midnight</p>
+    <h3>Music</h3>
+    <p class="tag">Gold staff lines on a concert-black card.</p>
+    <p class="best"><b>Best for</b> Performance, composition, musicology</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-music/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-music/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+<article class="tpl" data-group="Arts &amp; Media" data-q="architecture &amp; environmental design blueprint grid over an architectural portfolio. landscape architecture, historic preservation, planning portfolio" style="--a:#1f5fbf">
+  <a class="shot" href="https://ank-man.github.io/gsa-connect-architecture/" target="_blank" rel="noopener"><img src="docs/screenshots/architecture.jpg" alt="Architecture &amp; Environmental Design template preview" loading="lazy" width="390" height="844"></a>
+  <div class="body">
+    <p class="kicker"><span class="dot"></span>Arts &amp; Media · portfolio</p>
+    <h3>Architecture &amp; Environmental Design</h3>
+    <p class="tag">Blueprint grid over an architectural portfolio.</p>
+    <p class="best"><b>Best for</b> Landscape architecture, historic preservation, planning</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/ank-man/gsa-connect-architecture/generate" target="_blank" rel="noopener">Use template</a>
+      <a class="btn" href="https://ank-man.github.io/gsa-connect-architecture/" target="_blank" rel="noopener">Live demo ↗</a>
+    </div>
+  </div>
+</article>
+  </div>
+</main>
+<footer><div class="wrap">GSA Connect kit · MIT licensed · Powered by <strong>ScholarTap</strong> · <a href="https://github.com/ank-man/gsa-connect-kit">Source on GitHub</a></div></footer>
+<script>
+const chips = [...document.querySelectorAll(".chip")], q = document.querySelector("input[type=search]"), tpls = [...document.querySelectorAll(".tpl")];
+let group = "";
+function apply() {
+  const s = q.value.trim().toLowerCase(); let n = 0;
+  tpls.forEach((t) => { const ok = (!group || t.dataset.group === group) && (!s || t.dataset.q.includes(s)); t.hidden = !ok; n += ok; });
+  document.getElementById("count").textContent = n + " template" + (n === 1 ? "" : "s");
+}
+chips.forEach((c) => c.onclick = () => { group = c.dataset.g; chips.forEach((x) => x.setAttribute("aria-pressed", x === c)); apply(); });
+q.oninput = apply; apply();
+</script>
+</body>
+</html>
