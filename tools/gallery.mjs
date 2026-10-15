@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Writes index.html: the browsable template catalog served from the kit's GitHub Pages.
 //   OWNER=<github-user-or-org> node tools/gallery.mjs
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { THEMES } from "./themes.mjs";
 
@@ -85,7 +85,7 @@ footer strong { color: var(--accent); }
   <p class="eyebrow">UGA Graduate Student Association · GSA Connect</p>
   <h1>A digital business card for every major.</h1>
   <p class="lede">${THEMES.length} free, open-source card templates for graduate and professional students. Host your CV, research and links on GitHub Pages, share by QR or NFC tap, and add your card to Apple, Google or Samsung Wallet.</p>
-  <ul class="feats"><li>📇 Save-contact vCard</li><li>📄 CV &amp; publications</li><li>🔳 QR + NFC</li><li>👛 Apple · Google · Samsung Wallet</li><li>🧩 Setup form + live preview</li><li>🆓 Free hosting</li></ul>
+  <ul class="feats"><li>📇 Save-contact vCard</li><li>📄 CV &amp; publications</li><li>🔳 QR + NFC</li><li>👛 Apple · Google · Samsung Wallet</li><li>🧩 Setup form + live preview</li><li>🆓 Free hosting</li><li><a href="nfc.html">📶 Program an NFC card →</a></li></ul>
   <div class="quick"><h2>Three-minute start</h2><pre>gh repo create my-card --template ${owner}/gsa-connect-entomology --public --clone
 cd my-card && npm run setup     # form opens → upload photo &amp; CV → Publish</pre></div>
 </header>
@@ -116,4 +116,12 @@ q.oninput = apply; apply();
 </html>
 `;
 await writeFile(resolve(kit, "index.html"), html);
+
+// Universal NFC writer for GSA tabling events: same page as each card's, but not tied to one card.
+const nfc = (await readFile(resolve(kit, "shared/nfc.html"), "utf8"))
+  .replace('src="js/vendor/qrcode.js"', 'src="shared/js/vendor/qrcode.js"')
+  .replace('href="favicon.svg"', 'href="shared/favicon.svg"')
+  .replace("<h1>Program your NFC card</h1>", "<h1>GSA Connect NFC writer</h1>")
+  .replace('fetch("card.json"', 'fetch("card.json?none"');
+await writeFile(resolve(kit, "nfc.html"), nfc);
 console.log(`✓ index.html (${THEMES.length} templates, owner ${owner})`);
